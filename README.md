@@ -10,7 +10,7 @@ It reads the amount of deaths versus Sans from the game's savefile (located in `
 2. Open `SansDeathCounter.exe`: a `deaths.txt` file will be generated.
 3. On your streaming software (OBS/Streamlabs) add a Text source that reads from `deaths.txt`.
 
-That's it!
+That's it! Just remember to **keep the program open while streaming**, otherwise the counter won't be updated.
 
 ## To-do list
 
