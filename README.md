@@ -1,5 +1,7 @@
 # Sans Death Counter
 
+***THIS ONLY WORKS WITH THE PC/STEAM VERSION OF UNDERTALE!***
+
 Sans Death Counter is a simple utility aimed at streamers who play Undertale.
 
 It reads the amount of deaths versus Sans from the game's savefile (located in `%localappdata%\UNDERTALE\undertale.ini`) and writes it on a file called `deaths.txt`, with the prefix `Deaths:`. The file is updated as soon as the game writes new data on `undertale.ini`.
