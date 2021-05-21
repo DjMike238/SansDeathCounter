@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -11,9 +11,9 @@ namespace SansDeathCounter
 
         private static void Main()
         {
-            Console.Title = "Sans Death Counter v1.0 - by Dj_Mike238 - PRESS ENTER TO EXIT";
+            Console.Title = "Sans Death Counter v1.1 - by Dj_Mike238 - PRESS ENTER TO EXIT";
 
-            Console.WriteLine("Sans Death Counter v1.0 - by Dj_Mike238");
+            Console.WriteLine("Sans Death Counter v1.1 - by Dj_Mike238");
             Console.WriteLine("- PRESS ENTER TO EXIT -\n");
 
             if (File.Exists(path))
