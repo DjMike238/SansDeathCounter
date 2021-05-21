@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -79,6 +79,7 @@ namespace SansDeathCounter
 
         private static void OnChanged(object sender, FileSystemEventArgs e)
         {
+            while (IsFileLocked()) { }
             UpdateDeaths();
         }
 
@@ -88,6 +89,21 @@ namespace SansDeathCounter
             Console.WriteLine("[WARN] Press ENTER to exit.");
             Console.ReadLine();
             Environment.Exit(0);
+        }
+
+        private static bool IsFileLocked()
+        {
+            try
+            {
+                var fs = File.Open(path, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
+                fs.Close();
+            }
+            catch (IOException)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
